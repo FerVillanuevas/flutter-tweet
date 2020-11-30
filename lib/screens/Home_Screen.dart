@@ -1,3 +1,4 @@
+import 'package:demo/screens/Profile_Screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Image.network(
                     'https://straightdopeness.files.wordpress.com/2011/07/tumblr_ljvcy6eyzb1qb7rub.jpg'),
               ),
-              onPressed: () => {print('Click')})
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return ProfileScreen();
+                  }),
+                );
+              })
         ],
       ),
       body: ListView.builder(
